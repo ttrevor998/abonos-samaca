@@ -1,0 +1,58 @@
+<!-------- <link rel="stylesheet" href="../styles/galleryStyle.css"/>  ---------------->
+
+<head>
+    <!---
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    --->
+    <link rel="stylesheet" href="galleryStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</head>
+
+<body>
+    <section class="game-section">
+        <h2 class="line-title">Producción Abonos</h2>
+        <div class="owl-carousel custom-carousel owl-theme">
+            <div class="item active" style="background-image: url(gallery/selected/1.jpg);">
+                <div class="item-desc">
+                    <h3>Humus</h3>
+                    <p>Reproducción de Lombrices</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        let owlCarrousel = document.getElementsByClassName('owl-carousel')
+        
+        for(i=0; i<10; i++){
+            let newElem=document.createElement('div')
+            newElem.className='item'
+            newElem.style.backgroundImage="url(gallery/selected/"+i+".jpg)"
+            newElem.innerHTML='<div class="item-desc"><p>new desc</p></div>'
+            owlCarrousel[0].appendChild(newElem)
+
+        }
+        console.log(owlCarrousel[0])
+    </script>
+
+
+
+    <script id="rendered-js">
+        $(".custom-carousel").owlCarousel({
+            autoWidth: true,
+            loop: true
+        });
+        $(document).ready(function () {
+            $(".custom-carousel .item").click(function () {
+                $(".custom-carousel .item").not($(this)).removeClass("active");
+                $(this).toggleClass("active");
+            });
+        });
+    </script>
+
+</body>
