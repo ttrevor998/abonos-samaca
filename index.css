@@ -134,6 +134,7 @@ nav>#logo {
     align-items: center;
     grid-gap: 8px;
     line-height: 100%;
+    width: 200px;
 }
 
 nav>#logo>span {
@@ -369,6 +370,40 @@ section.hero {
 #banner-image {
     width: 100%;
     max-height: auto;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.banner-video-title {
+    /*background-color: #147c0a59;*/
+    padding: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInZoom 3s ease forwards;
+}
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
 
@@ -629,9 +664,8 @@ footer ul li {
         padding: 0;
         font-size: 1.5vh;
     }
-    #banner-title{
-        /*margin-bottom: 5vh;*/
-	display:none;
+    .banner-video-title{
+        font-size: 2.5em;
     }
 
     /*banner*/

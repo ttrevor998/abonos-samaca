@@ -13,18 +13,9 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="banner">Envíos Gratuitos por compras de más de 100k</div>
         <nav>
-            <div id="logo">
+            <div id="logo-container" style="width:180px !important;">
+                <img src="assets/logo2.png" alt="" style="width: 100%; height: auto;">
 
-                <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M12.8 32H0V21.9849C0 17.1239 4.0116 13.1839 8.96 13.1839H15.2V0.468341C15.2 0.251458 15.3792 0.0754376 15.6 0.0754376C15.7184 0.0754376 15.8308 0.127301 15.9068 0.216883L17.3616 1.92719C18.402 1.07577 19.74 0.563816 21.2 0.563816H22C23.442 0.563816 24.7656 1.06359 25.8 1.89654L27.2932 0.14066C27.3692 0.0514706 27.4812 0 27.6 0C27.8208 0 28 0.175628 28 0.392904V15.3896H23.36C17.528 15.3896 12.8 20.0337 12.8 25.7623V32Z"
-                        fill="#45413E" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M29.76 17.0569V12.0875C29.76 12.0836 29.76 12.0797 29.76 12.0758V6.79004C29.76 6.57435 29.9392 6.4 30.16 6.4C30.266 6.4 30.3676 6.44095 30.4424 6.51389L31.9576 7.98784C32.7864 7.42501 33.7936 7.09504 34.88 7.09504C35.97 7.09504 36.9808 7.42735 37.8112 7.99369L39.3176 6.52793C39.3924 6.45499 39.494 6.41404 39.6 6.41404C39.8208 6.41404 40 6.58878 40 6.80408V23.2632C40 28.0883 35.9884 32 31.04 32H14.4V25.7938C14.4 20.969 18.4116 17.0569 23.36 17.0569H29.76Z"
-                        fill="#45413E" />
-                </svg>
-
-                Abonos <br> Samacá
             </div>
 
             <ul class="navigation-menu" id="navigation-menu">
@@ -57,20 +48,101 @@
     </header>
 
     <section class="hero" style="display:flex; flex-direction:row; width:100vw ; height:70vh">
-        <div id="title-container" style="width:40%;">
-            <h1 id="banner-title">Abonos Samacá</h1>
-            <h2 style="margin-bottom: 5vh">Aprovechamos Residuos Orgánicos</h2>
 
-            <p id="banner-description" style="margin-bottom: 20vh;">
-                Somos una empresa 100% Samaquense dedicada a la producción de Abonos orgánicos y Humus
-            </p>
+        <!-- First video -->
+        <video id="video1" class="video-background" muted>
+            <source src="assets/videos/1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-            <div class="btn-group">
-                <button id="banner-button" class="btn-outline-dark btn-hover-color"><a href="#contact-form"
-                        style="text-decoration: none;color:#45413E ">Contáctanos</a></button>
-            </div>
-        </div>
-        <img style="width:60%" id="banner-image" src="assets/gallery/selected/IMG-20240106-WA0006.jpg" alt="abonos">
+        <!-- Second video (initially hidden) -->
+        <video id="video2" class="video-background" muted style="display: none;">
+            <source src="assets/videos/2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Second video (initially hidden) -->
+        <video id="video3" class="video-background" muted style="display: none;">
+            <source src="assets/videos/3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Second video (initially hidden) -->
+        <video id="video4" class="video-background" muted style="display: none;">
+            <source src="assets/videos/4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Second video (initially hidden) -->
+        <video id="video5" class="video-background" muted style="display: none;">
+            <source src="assets/videos/5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Titles -->
+        <div id="title1" class="banner-video-title">Abonos Samacá</div>
+        <div id="title2" class="banner-video-title" style="display: none;">Somos Productores de Abonos</div>
+        <div id="title3" class="banner-video-title" style="display: none;">Creemos en La Agricultura Orgánica</div>
+        <div id="title4" class="banner-video-title" style="display: none;">Creemos en La Biodiversidad</div>
+        <div id="title5" class="banner-video-title" style="display: none;">Creemos en La Restauración de Suelos</div>
+
+        <script>
+            const video1 = document.getElementById('video1');
+            const video2 = document.getElementById('video2');
+            const video3 = document.getElementById('video3');
+            const video4 = document.getElementById('video4');
+            const title1 = document.getElementById('title1');
+            const title2 = document.getElementById('title2');
+            const title3 = document.getElementById('title3');
+            const title4 = document.getElementById('title4');
+            const title5 = document.getElementById('title5');
+
+            // Start by playing the first video
+            video1.play();
+
+            // When the first video ends, show the second video and second title
+            video1.onended = function () {
+                video1.style.display = 'none'; // Hide the first video
+                video2.style.display = 'block'; // Show the second video
+                video2.play(); // Start the second video
+                title1.style.display = 'none'; // Hide the first title
+                title2.style.display = 'block'; // Show the second title
+            };
+
+            // When the second video ends, loop back to the first video
+            video2.onended = function () {
+                video2.style.display = 'none'; // Hide the second video
+                video3.style.display = 'block'; // Show the first video
+                video3.play();
+                title2.style.display = 'none'; // Hide the second title
+                title3.style.display = 'block'; // Show the third title again
+            };
+
+            video3.onended = function () {
+                video3.style.display = 'none'; // Hide the third video
+                video4.style.display = 'block'; // Show the fourth video
+                video4.play(); // Show the fourth video 
+                title3.style.display = 'none'; // Hide the second title
+                title4.style.display = 'block'; // Show the fourth title
+            };
+
+            video4.onended = function () {
+                video4.style.display = 'none'; // Hide the second video
+                video5.style.display = 'block'; // Show the fifthvideo
+                video5.play(); // Start the fifth video again
+                title4.style.display = 'none'; // Hide the fourth title
+                title5.style.display = 'block'; // Show the first title again
+            };
+
+            video5.onended = function () {
+                video5.style.display = 'none'; // Hide the second video
+                video1.style.display = 'block'; // Show the first video
+                video1.play(); // Start the first video again
+                title5.style.display = 'none'; // Hide the fourth title
+                title1.style.display = 'block'; // Show the first title again
+            };
+
+        </script>
 
     </section>
 
