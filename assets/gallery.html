@@ -27,13 +27,164 @@
     </section>
 
     <script>
+
+        const descriptionArr = [
+            {
+                "id": 2,
+                "name": "2",
+                "description": "2-descripcion"
+            },
+            {
+                "id": 3,
+                "name": "3",
+                "description": "3-descripcion"
+            },
+            {
+                "id": 4,
+                "name": "4",
+                "description": "4-descripcion"
+            },
+            {
+                "id": 5,
+                "name": "5",
+                "description": "5-descripcion"
+            },
+            {
+                "id": 6,
+                "name": "6",
+                "description": "6-descripcion"
+            },
+            {
+                "id": 7,
+                "name": "7",
+                "description": "7-descripcion"
+            },
+            {
+                "id": 8,
+                "name": "8",
+                "description": "8-descripcion"
+            },
+            {
+                "id": 9,
+                "name": "9",
+                "description": "9-descripcion"
+            },
+            {
+                "id": 10,
+                "name": "10",
+                "description": "10-descripcion"
+            },
+            {
+                "id": 11,
+                "name": "11",
+                "description": "11-descripcion"
+            },
+            {
+                "id": 12,
+                "name": "12",
+                "description": "12-descripcion"
+            },
+            {
+                "id": 13,
+                "name": "13",
+                "description": "13-descripcion"
+            },
+            {
+                "id": 14,
+                "name": "14",
+                "description": "14-descripcion"
+            },
+            {
+                "id": 15,
+                "name": "15",
+                "description": "15-descripcion"
+            },
+            {
+                "id": 16,
+                "name": "16",
+                "description": "16-descripcion"
+            },
+            {
+                "id": 17,
+                "name": "17",
+                "description": "17-descripcion"
+            },
+            {
+                "id": 18,
+                "name": "18",
+                "description": "18-descripcion"
+            },
+            {
+                "id": 19,
+                "name": "19",
+                "description": "19-descripcion"
+            },
+            {
+                "id": 20,
+                "name": "20",
+                "description": "20-descripcion"
+            },
+            {
+                "id": 21,
+                "name": "21",
+                "description": "21-descripcion"
+            },
+            {
+                "id": 22,
+                "name": "22",
+                "description": "22-descripcion"
+            },
+            {
+                "id": 23,
+                "name": "23",
+                "description": "23-descripcion"
+            },
+            {
+                "id": 24,
+                "name": "24",
+                "description": "24-descripcion"
+            },
+            {
+                "id": 25,
+                "name": "25",
+                "description": "25-descripcion"
+            },
+            {
+                "id": 26,
+                "name": "26",
+                "description": "26-descripcion"
+            },
+            {
+                "id": 27,
+                "name": "27",
+                "description": "27-descripcion"
+            },
+            {
+                "id": 28,
+                "name": "28",
+                "description": "28-descripcion"
+            },
+            {
+                "id": 29,
+                "name": "29",
+                "description": "29-descripcion"
+            },
+            {
+                "id": 30,
+                "name": "30",
+                "description": "30-descripcion"
+            }
+        ]
+
+        console.log('length', descriptionArr.length);
+
         let owlCarrousel = document.getElementsByClassName('owl-carousel')
-        
-        for(i=0; i<10; i++){
-            let newElem=document.createElement('div')
-            newElem.className='item'
-            newElem.style.backgroundImage="url(gallery/selected/"+i+".jpg)"
-            newElem.innerHTML='<div class="item-desc"><p>new desc</p></div>'
+
+        for (i = 0; i < descriptionArr.length - 1; i++) {
+            let newElem = document.createElement('div')
+            newElem.className = 'item'
+            newElem.style.backgroundImage = "url(gallery/selected/" + i + ".jpg)"
+            newElem.innerHTML = '<div class="item-desc">' + `<h3>${descriptionArr[i].name}</h3>` + `<p>${descriptionArr[i].description}</p></div>`
             owlCarrousel[0].appendChild(newElem)
 
         }
